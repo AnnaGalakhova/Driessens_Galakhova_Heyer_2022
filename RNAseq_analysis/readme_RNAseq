@@ -1,0 +1,25 @@
+All the codes below were written in Spyder v4.2.5 (Anaconda package, Python 3.8.8 environment).
+Codes are written for extracting the RNA-seq data from AIBS database. 
+The data provided on the website contains non-normalised values (counts). In order to run analysis performed in the paper, the normalization to log10(CPM+1) is required, which is separately performed for the regions dataset, and is performed within the script analyzing MTG region. 
+	
+RNA_seq_data_normalization.py
+This is a script performing bulk conversion of the csv file from counts format to log10(CPM_1) format, used in the current paper.
+
+Input : Gene expression matrices provided as a csv from the database (counts)
+Output : Gene expression matrices as a csv (log10(CPM+1))
+
+regions_revision_v3_script_publish.py
+
+This script is used to analyze and plot subsets of the AIBS RNA-seq database (https://portal.brain-map.org/atlases-and-data/rnaseq).
+MULTIPLE CORTICAL AREAS - SMART-SEQ (2019) full matrix (exons+introns) is used to sub-select expression values for specific genes of interest per region or cell classes. 
+
+Input: metadata and pre-normalized gene expression matrix as a csv from the database
+Output: gene expression matrix with data on genes of interest and metadata required for region and cell class subdivision; violin plots, per donor and all the cells together; Kruskal-Wallis statistics with Dunn post-hoc correction; Friedman test with Dunn post-hoc correction.
+
+MTG_revision_V4_publication.py
+
+This script is used to analyse and plot subsets of the AIBS RNA-seq database (https://portal.brain-map.org/atlases-and-data/rnaseq).
+MTG - SMART-SEQ (2019) separate matrices (exons and introns) is used to sub-select expression values for specific genes of interest per transcriptomic type within MTG.
+
+Input: metadata and raw gene expression matrix (exons and introns separately) as a csv from the database
+Output: gene expression matrix in log10(CPM+1) format; with data on genes of interest and metadata required for and transcriptomic cell type and layer subdivision; violin plots; data per donor and pulled; Kruskal-Wallis statistics with  Dunn post-hoc correction; Friedman test with Dunn post-hoc correction.
