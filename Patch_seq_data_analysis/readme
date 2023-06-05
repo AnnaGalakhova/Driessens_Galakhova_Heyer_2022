@@ -1,0 +1,9 @@
+This folder contains the Matlab scripts and processed data files accompanying the paper titled:
+
+Large and fast excitatory transcriptomic neuron types in human cortex preferentially express genes of intelligence and HARs.
+
+Authors:
+Stan LW Driessens 1*, Anna A Galakhova 1*, Djai B Heyer 1*, Isabel J Pieterse1, René Wilbers 1, Eline J Mertens 1, Femke Waleboer 1, Tim S Heistek 1, Loet Coenen 1, Julia R Meijer 1, Sander Idema 2, Philip C de Witt Hamer 2, David P Noske 2, Christiaan PJ de Kock 1, Brian R Lee 3, Kimberly Smith 3, Jonathan T Ting 3, Ed S Lein 3, Huibert D Mansvelder 1, Natalia A Goriounova 1
+
+To start the analysis run the script “Analysis_start_script.m”. This script loads the file “data.mat” that contains morphology data (SummHmorph2), physiology data (SummH2) and opens the csv file with gene expression data in CPM for all genes (‘cpm_all_data.csv’).
+The script calls the functions in the folder to analyze the data and plot figures.
